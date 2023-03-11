@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+button[type="button"]{
+    position: relative;
+    background-color: #8395a7;
+
+    margin-bottom: 32px;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mask-container {
+    position: relative;
+}
+
+.mask-container>img {
+    height: auto;
+    width: 448px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.mask-container>img:nth-of-type(1) {
+    position: absolute;
+    inset: 0;
+    mask-image: url("../img/content/mask.png");
+    -webkit-mask-image: url("../img/content/mask.png");
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    mask-position: 100% 0px;
+    -webkit-mask-position: 100% 0px;
+}
+
+.animation-fill {
+    animation: fillColor 1792ms steps(32) forwards;
+}
+
+@keyframes fillColor {
+    from {
+        mask-position: 100% 0px;
+        -webkit-mask-position: 100% 0px;
+    }
+
+    to {
+        mask-position: 0% 0px;
+        -webkit-mask-position: 0% 0px;
+    }
+}
