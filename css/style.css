@@ -10,11 +10,36 @@ body {
     background-color: #ffffff;
 }
 
-button[type="button"]{
+button[type="button"] {
     position: relative;
-    background-color: #8395a7;
-
+    background-color: #222f3e;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #ffffff;
+    padding: 6px 12px;
     margin-bottom: 32px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #29394b;
+}
+
+button[type="button"]:active {
+    background-color: #576574;
+}
+
+button[type="button"]:not(:last-of-type) {
+    margin-right: 16px;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -32,7 +57,7 @@ button[type="button"]{
 
 .mask-container>img {
     height: auto;
-    width: 448px;
+    width: 768px;
     object-fit: cover;
     object-position: center center;
 }
