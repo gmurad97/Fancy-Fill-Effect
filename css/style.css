@@ -70,21 +70,21 @@ button[type="button"]:not(:last-of-type) {
     mask-size: cover;
     -webkit-mask-size: cover;
     mask-position: 100% 0px;
-    -webkit-mask-position: 100% 0px;
+    -webkit-mask-position: 0% 0px;
 }
 
 .animation-fill {
-    animation: fillColor 1792ms steps(32) forwards;
+    animation: fillColor 1024ms steps(32) forwards;
 }
 
 @keyframes fillColor {
     from {
-        mask-position: 100% 0px;
-        -webkit-mask-position: 100% 0px;
+        mask-position: 0% 0px;
+        -webkit-mask-position: 0% 0px;
     }
 
     to {
-        mask-position: 0% 0px;
-        -webkit-mask-position: 0% 0px;
+        mask-position: 100% 0px;
+        -webkit-mask-position: 100% 0px;
     }
 }
